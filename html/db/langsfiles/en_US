@@ -1,0 +1,407 @@
+[index]
+Home = Home
+Miquiloni_Login = Miquiloni Login
+Log_In = Log In
+Username = Username
+Password = Password
+Logged_in_as = Logged in as
+Logout = Logout
+Clear_Screen = Clear Screen
+LXC_Servers = LXC Servers
+Containers = Containers
+Add_LXC_Containers = Add LXC Containers
+Backup_Policies = Backup Policies
+Backup_Scheduler = Backup Scheduler
+Recovery_from_Backup = Recovery from Backup
+Clone_Instance = Clone Instance
+User_Accounts = User Accounts
+Settings = Settings
+Documentation = Documentation
+Help = Help
+About = About
+Legal_License = Legal & License
+Log_off = Log off
+Are_you_sure_you_want_to_log_off = Are you sure you want to log off
+Provisioning = Provisioning
+Overview = Overview
+Accounts = Accounts
+Migration = Migration
+Clone_Container = Clone Container
+Key_Pairs = Key Pairs
+Distros = Distros
+My_Account = My Account
+Sectors = Sectors
+
+
+[init]
+LXC_Server_Management = LXC Servers Management
+My_Account_Management = My Account Management
+Managing_User_Accounts = Managing User Accounts
+Settings_for_some_things = Settings for some things
+Miquiloni_Documents = Miquiloni Documents
+Provisioning = Provisioning
+Overview = Overview
+
+
+[settings]
+Settings_for_some_things = Settings for some things
+Edit_my_record = Edit my record
+Password = password
+Password_again = Password again
+Name = Name
+Last_Name = Last Name
+Mothers_Last_Name = Mother's Last Name
+Email = Email
+Secondary_Email = Secondary Email
+Phone = Phone
+Secondary_Phone = Secondary Phone
+Theme = Theme
+Language = Language
+Save = Save
+
+
+[LXCServers]
+LXC_Server_Management = LXC Servers Management
+Passwords_does_not_match = Passwords does not match
+There_are_some_Containers_Delete_them_first = There are some Containers in this LXC Server. Delete them first, then try to delete it again.
+LXC_Server_alredy_exists = LXC Server alredy exists
+IPV4_is_mandatory = IPV4 is mandatory
+Memory = Memory
+CPU_Make = CPU Make
+CPU_Model = CPU Model
+CPU_Speed = CPU Speed
+Private_Key = Private Key
+Storage = Storage
+Sector_Name = Sector Name
+Description = Description
+Sector = Sector
+
+
+[lxcservers_edit]
+All_omplete_and_partial_cores = All (complete and partial cores)
+Editing = Editing
+HostName = HostName
+Are_you_sure_you_want_to_continue_deleting_the = Are you sure you want to continue deleting the
+Register_new_Server = Register new Server
+Memory = Memory
+CPU_Make = CPU Make
+CPU_Model = CPU Model
+CPU_Speed = CPU Speed
+Private_Key = Private Key
+Memory_in_MiB = Memory in MiB
+Create_Containers_Mode = Create Containers Mode
+Storage_Provisioning_Mode = Storage Provisioning Mode
+Short_Description = Short Description
+Edit_Sectors = Edit Sectors
+Please_wait_a_while_and_dont_close_this_window = Please wait a while and don't close this window...
+Adding_new_LXC_Server = Adding new LXC Server
+Save = Save
+Delete = Delete
+Creation_Date = Creation Date
+Memory_value_in_MBytes = Memory value in MBytes
+CPU_will_be_an_unmodifiable_value_after_you_save = CPU will be an unmodifiable value after you save
+You_should_be_sure_of_this_value = You should be sure of this value
+Password_for_LXC_Server = root Password for LXC Server
+Password_wont_storage_only_will_use_it_if_you_wish_update_Private_Key_in = Password wont storage, only will use it if you wish update Private Key in the LXC Server.<br /><br /><b>Leave empty</b> if LXC Server is already reached by Miquiloni.
+
+
+[Provisioning]
+Provisioning = Provisioning
+Please_Select = Please Select
+LXC_Servers_available_in_Sector = LXC Servers available in Sector
+Free_Memory = Free Memory
+Free_CPUs = Free CPUs
+CPU_Make = CPU Make
+CPU_Model = CPU Model
+CPU_Speed = CPU Speed
+Free_of = Free of
+I_cannot_read_the_list_of_VGs_Please_go_back_and_try_again = I cannot read the list of VG's. Please go back and try again.
+Selecting_hardware_base_from = Selecting hardware base from
+Memory = Memory
+Free = Free
+M_for_memory_unity_MBytes_Default_is_M_if_no_Memory_unity_1024M_instead_of_1G_1024_and_1024M_are_the_same_thing = M for memory unity (MBytes).<br>Default is M if no Memory unity.<br>1024M instead of 1G. 1024 and 1024M are the same thing.
+If_you_want_one_or_more_whole_CPUs = If you want one or more whole CPUs.
+I_want_whole_CPUs = I want whole CPUs
+Percent_CPU = Percent CPU
+I_prefer_a_fraction_of_CPU =  prefer a fraction of CPU
+If_you_want_a_fraction_of_one_CPUs = If you want a fraction of one CPU.
+Volume_Size = Volume Size
+M_G_or_T_for_volume_size_unity_Default_is_G_if_no_Size_unity_1024M_1G_or_1024_are_the_same_thing = M, G or T for volume size unity.<br>Default is G if no Size unity.<br>1024M, 1G or 1024 are the same thing.
+Container_Name = Container Name
+Distro_Release_Arch = Distro, Release, Arch.
+Start_Auto_at_LXC_Server_Start = Start Auto at LXC Server Start
+Yes = Yes
+No = No
+If_you_want_start_this_container_at_moment_of_start_the_LXC_Server_select_Yes = If you want start this container at moment of start the LXC Server, select Yes.
+Start_Delay_after_LXC_Server_Start = Start Delay after LXC Server Start
+Seconds = Seconds
+Interfase_eth0_protocol = Interfase eth0 protocol
+We_strongly_recommend_that_you_select_DHCP_at_startup_and_then_change_it_to_STATIC_if_you_wish = We strongly recommend that you select DHCP at startup and then change it to STATIC if you wish.<br><br>Reason:<br>When you create a new server, SSH is installed when you start it for the first time and if you do not have an appropriate network configuration, it will not install and you will not be able to access it by public key.
+IP_Address_IPv4 = IP Address IPv4
+Gateway = Gateway
+Netmask = Netmask
+Network = Network
+Key = Public Key
+Short_Description = Short Description
+Launch_Container = Launch Container
+Back_to_start = Back to start
+Alert = Alert
+Container_is_creating_now = Container is creating now.
+Please_wait_a_while_and_dont_close_this_window = Please wait a while and don't close this window...
+Please = Please
+back = back
+and_correct_the_field = and correct the field
+Memory_value_is_missing = Memory value is missing
+Memory_value_is_not_correct = Memory value is not correct
+Volume_Group_is_missing = Volume Group is missing
+Volume_Size_is_missing = Volume Size is missing
+Volume_Size_does_not_have_the_correct_format = Volume Size does not have the correct format
+Container_Name_is_missing = Container Name is missing
+Container_Name_has_invalid_characters = Container Name has invalid characters
+Host_Name_is_missing = Hostname is missing
+Host_Name_has_invalid_characters = Hostname has invalid characters
+Host_Name_already_exists = Hostname already exists
+
+
+[accounts]
+User_Accounts = User Accounts
+Passwords_does_not_match = Passwords does not match
+Passwords_are_mandatory = Passwords are mandatory
+Username_alredy_exists = Username alredy exists
+User_Name_and_Passwords_are_mandatory = User Name and Passwords are mandatory
+List_of_Accounts = List of Accounts
+User_Name = User Name
+Name = Name
+Last_Name = Last Name
+Mothers_Last_Name = Mother's Last Name
+Email = Email
+Active = Active
+
+
+[accounts_edit]
+User_Accounts_Edition = User Accounts Edition
+Editing = Editing
+Password = Password
+Password_again = Password again
+Name = Name
+Last_Name = Last Name
+Mothers_Last_Name = Mother's Last Name
+ID_Employee = ID Employee
+Email = Email
+Secondary_Email = Secondary Email
+Phone = Phone
+Secondary_Phone = Secondary Phone
+Cost_Center_ID = Cost Center ID
+Group_ID = Group ID
+Secondary_Group_ID = Secondary Group ID
+Theme = Theme
+Language = Language
+Active = Active
+PERMISIONS = PERMISIONS
+LXC_Servers = LXC Servers
+LXC_Servers_Edition = LXC Servers Edition
+Provisioning = Provisioning
+Accounts = Accounts
+Accounts_Edition = Accounts Edition
+Containers = Containers
+Containers_Edition = Containers Edition
+Sectors = Sectors
+Migration = Migration
+Key_Pairs = Key Pairs
+Linux_Distros = Linux Distros
+Alert = Alert
+Saving_changes_for_user = Saving changes for user
+Please_wait_a_while_and_dont_close_this_window = Please wait a while and don't close this window...
+Save = Save
+Are_you_sure_you_want_to_continue_deleting_the_user = Are you sure you want to continue deleting the user
+Delete = Delete
+Create_new_user = Create new user
+Username = Username
+
+
+[Sectors]
+Sector_Management = Sector Management
+List_of_Sectors = List of Sectors
+Sector_Name = Sector Name
+Description = Description
+Editing_record = Editing record
+Save = Save
+Are_you_sure_you_want_to_continue_deleting_the_Sector = Are you sure you want to continue deleting the Sector
+Delete = Delete
+NEW_Sector = NEW Sector
+Back_to_list = Back to list
+Creating_new_record = Creating new record
+
+
+[Migration]
+Migration = Migration
+We_only_can_migrate_One_Container_at_the_same_time_Please = We only can migrate One Container at the same time. Please
+go_Back = go Back
+and_select_just_One_Container_to_migrate = and select just One Container to migrate
+Container_is_LOCKED_Please = Container is LOCKED. Please
+and_select_another_Container_to_migrate = and select another Container to migrate
+Container_is_not_STOPPED_Please = Container is not STOPPED. Please
+and_STOP_the_Container_to_migrate = and STOP the Container to migrate
+LXC_Servers_available_in_Sector = LXC Servers available in Sector
+Hostname = Hostname
+Free_Memory = Free Memory
+Free_CPUs = Free CPUs
+CPU_Make = CPU Make
+CPU_Model = CPU Model
+CPU_Speed = CPU Speed
+I_cannot_read_the_list_of_VGs_Please_go_back_and_try_again = I cannot read the list of VG's. Please go back and try again
+Selecting_hardware_base_of = Selecting hardware base of
+Memory = Memory
+Free = Free
+M_or_G_for_memory_unity_Default_is_M_if_no_Memory_unity_1024M_1G_or_1024_are_the_same_thing = M for memory unity.<br>Default is M if no Memory unity.<br>1024M, 1G and 1024 are the same thing.
+I_want_whole_CPUs = I want whole CPUs
+If_you_want_one_or_more_whole_CPUs = If you want one or more whole CPUs.
+Percent_CPU = Percent CPU
+I_prefer_a_fraction_of_CPU = I prefer a fraction of CPU
+If_you_want_a_fraction_of_one_CPUs = If you want a fraction of one CPU.
+Volume_Size = Volume Size
+M_G_or_T_for_volume_size_unity_Default_is_G_if_no_Size_unity_1024M_1G_or_1024_are_the_same_thing = M, G or T for volume size unity.<br>Default is G if no Size unity.<br>1024M, 1G or 1024 are the same thing.
+Target_LXC_Server_Password = Target LXC Server Password
+Migrate_Container = Migrate Container
+Alert = Alert
+Container_is_being_migrating_now = Container is being migrating now
+Please_wait_a_while_and_dont_close_this_window = Please wait a while and don't close this window...
+Please = Please
+back = back
+and_correct_the_field = and correct the field
+Memory_value_is_missing = Memory value is missing
+Memory_value_is_not_correct = Memory value is not correct
+Volume_Group_is_missing = Volume Group is missing
+Volume_Size_is_missing = Volume Size is missing
+Volume_Size_does_not_have_the_correct_format = Volume Size does not have the correct format
+
+
+[Key_Pairs]
+Key_Pairs_Management = Key Pairs Management
+Key_Pair = Key Pair
+already_exists = already exists
+Please_go = Please go
+back = back
+and_try_with_other_name = and try with other name
+Input_not_valid_Must_contains_4_characters_at_least_and_must_has = Input not valid. Must contains 4 characters at least, and must has "a-z", "0-9", "-" and "_"
+Public_Key = Public Key
+Unix_Creation_Date = Unix Creation Date
+Download_Private_Key = Download Private Key
+Delete = Delete
+Are_you_sure_you_want_to_continue_deleting_the_Key_Pair = Are you sure you want to continue deleting the Key Pair
+Name_for_a_new_SSH_Key_Pair = Name for a new SSH Key Pair
+Generate = Generate
+Generating_the_new_Key_Pair = Generating the new Key Pair...
+
+
+[Containers]
+Containers_Management = Administración de Containers
+Container = Container
+is_locked_I_cant_start_it = is locked. I can't start it
+Alert = Alert
+Please_wait_a_while_and_dont_close_this_window = Please wait a while and don't close this window...
+Containers_are_starting_now = Containers are starting now
+Start = Start
+Containers_are_stoping_now = Containers are stoping now
+Please_confirm = Please confirm
+Are_you_sure_you_want_STOP_these_containers = Are you sure you want STOP these containers
+Yes = Yes
+Cancel = Cancel
+Stop = Stop
+Containers_are_destroying_now = Containers are destroying now
+Are_you_sure_you_want_DESTROY_these_containers = Are you sure you want DESTROY these containers
+Operation_will_destroy_all_data_and_will_not_be_recoverable = Operation will destroy all data, and will not be recoverable
+Destroy = Destroy
+Containers_are_freezing_now = Containers are freezing now
+Are_you_sure_you_want_FREEZE_these_containers = Are you sure you want FREEZE these containers
+Freeze = Freeze
+Containers_are_unfreeze_now = Containers are unfreeze now
+Unfreeze = Unfreeze
+Launch = Launch
+Migrate = Migrate
+Please_Select_Sector = Please Select Sector
+List_of_Containers = List of Containers
+Container_Name = Container Name
+Hostname = Hostname
+Status = Status
+Key = Key
+Boot_Proto = Boot Proto
+IP_Addr = IP Addr
+LXC_Server = LXC Server
+Distribution = Distribution
+Release = Release
+Architecture= Architecture
+Storage = Storage
+LV_Size = LV Size
+Memory = Memory
+CPU = CPU
+percent_Cpu = % Cpu
+Creation_Date = Creation Date
+
+
+[containers_edit]
+Containers_Edition = Containers_Edition
+Yes = Yes
+No = No
+Editing_Container = Editing Container
+Hostname = Hostname
+You_must_restart_this_container_for_the_changes_take_effect = You must restart this container for the changes take effect.<br /><br />Please note that any small change, will update all other values in the container
+Distro = Distro
+Root_Volume_Size = Root Volume Size
+Boot_proto = Boot proto
+Netmask = Netmask
+Gateway = Gateway
+Broadcast = Broadcast
+Network = Network
+Memory = Memory
+free = free
+Dont_exceed_the_limit_of = Don\&#39;t exceed the limit of
+plus_the_current_value_of_this_Container = plus the current value of this Container
+CPUs_ID = CPUs ID
+CPU_Percent = CPU Percent
+Start_Auto = Start Auto
+Start_Delay = Start Delay
+Short_Description = Short Description
+Creation_Date = Creation Date
+Alert = Alert
+Container_is_updating_now = Container is updating now
+Please_wait_a_while_and_dont_close_this_window = Por favor espere un momento y no cierre esta ventana...
+Please_confirm = Please confirm
+Are_you_sure_you_want_UPDATE_this_container = Are you sure you want UPDATE this container
+Cancel = Cancel
+Save = Save
+Reset = Reset
+
+
+[overview]
+Overview = Overview
+Warning = Warning
+
+
+[distros]
+Linux_Distributions = Linux Distributions
+You_have_not_configured_your_Query_data = You have not configured your 'Customer Number' and 'Password to Query' data
+You_have_not_correctly_configured_your_Query_data = You have not correctly configured your 'Customer Number' and 'Password to Query' data
+Please_copy_and_paste_correctly_your_data = Please copy and paste correctly your data from Email you received
+Go_to = Go to
+section_and_follow_instructions = section and follow instructions to have updated the Distros list
+This_is_for_connect_to_a_remote_Server_and = These are for connect to a remote Server and keep updated the list of distros you can create inside the LXC Server Nodes
+Please_go_to_the = Please go to the
+register_link = register link
+and_requesT_for_your_data_connection = and request for your data connection
+Then_read_your_Email_and_fill_the_next_form_and = Then, read your Email and fill the next form and capture your data to keep your Distro list updated
+Save = Save
+Distros = Distros
+Your_current_Distro_List_have_some_issues = Your current Distro List have some issues
+section_and_correct_the_problem = section and correct the problem
+Legends = Legends
+Distro_is_missing_in_your_Distro_List = Distro is missing in your Distro List
+Distro_No_longer_supported = Distro No longer supported
+Everything_is_Ok = Everything is Ok
+Distro_List = Distro List
+Build_Distro_List = Build/Rebuild Distro List
+
+
+[end]
+
+

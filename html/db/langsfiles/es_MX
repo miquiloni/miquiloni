@@ -1,0 +1,407 @@
+[index]
+Home = Inicio
+Miquiloni_Login = Ingreso Miquiloni
+Log_In = Ingresar
+Username = Nombre de Usuario
+Password = Contraseña
+Logged_in_as = Ingresado como
+Logout = Salir
+Clear_Screen = Limpiar Pantalla
+LXC_Servers = Servidores LXC
+Containers = Contenedores
+Add_LXC_Containers = Agregar Contenedores LXC
+Backup_Policies = Políticas de Respaldo
+Backup_Scheduler = Programar Respaldos
+Recovery_from_Backup = Recuperar desde Respaldo
+Clone_Instance = Clonar Instancia
+User_Accounts = Cuentas de Usuarios
+Settings = Configuraciones
+Documentation = Documentación
+Help = Ayuda
+About = Acerca de
+Legal_License = Legal & Licencias
+Log_off = Desconectar
+Are_you_sure_you_want_to_log_off = Está seguro de querer salir?
+Provisioning = Provisionamiento
+Overview = Vista general
+Accounts = Cuentas
+Migration = Migración
+Clone_Container = Clonar Container
+Key_Pairs = Par de Llaves
+Distros = Distros
+My_Account = Mi Cuenta
+Sectors = Sectores
+
+
+[init]
+LXC_Server_Management = Administración de Servidores LXC
+My_Account_Management = Administrar mi Cuenta
+Managing_User_Accounts = Administrar Cuentas de Usuario
+Settings_for_some_things = Configurar algunas cosas
+Miquiloni_Documents = Documentos Miquiloni
+Provisioning = Provisionamiento
+Overview = Vista general
+
+
+[settings]
+Settings_for_some_things = Configurando algunas cosas
+Edit_my_record = Editar my registro
+Password = Contraseña
+Password_again = Contraseña de nuevo
+Name = Nombre
+Last_Name = Apellido Paterno
+Mothers_Last_Name = Apellido Materno
+Email = Email
+Secondary_Email = Email Secundario
+Phone = Teléfono
+Secondary_Phone = Teléfono Secondario
+Theme = Theme
+Language = Languaje
+Save = Guardar
+
+
+[LXCServers]
+LXC_Server_Management = Administración de Servidores LXC
+Passwords_does_not_match = Los Passwords no coinciden
+There_are_some_Containers_Delete_them_first = Hay algunos Containers in este LXC Server. Elimínelos primero, luego intente borrarlo de nuevo.
+LXC_Server_alredy_exists = LXC Server ya existe
+IPV4_is_mandatory = IPV4 es obligatorio
+Memory = Memoria
+CPU_Make = Marca CPU
+CPU_Model = Modelo CPU
+CPU_Speed = Velocidad CPU
+Private_Key = LLave privada
+Storage = Almacenamiento
+Sector_Name = Sector
+Description = Descripción
+Sector = Sector
+
+
+[lxcservers_edit]
+All_complete_and_partial_cores = Todos (cores completos y partiales)
+Editing = Editando
+HostName = HostName
+Are_you_sure_you_want_to_continue_deleting_the = Está seguro que desea borrar el
+Register_new_Server = Registrar nuevo Server
+Memory = Memoria
+CPU_Make = Marca CPU
+CPU_Model = Modelo CPU
+CPU_Speed = Velocidad CPU
+Private_Key = LLave privada
+Memory_in_MiB = Memoria en MiB
+Create_Containers_Mode = Modo Creación Containers
+Storage_Provisioning_Mode = Modo Provisionar Alamacenamiento
+Short_Description = Descripción corta
+Edit_Sectors = Editar Sectores
+Please_wait_a_while_and_dont_close_this_window = Por favor, espere un momento y no cierre esta ventana...
+Adding_new_LXC_Server = Agregando nuevo LXC Server
+Save = Guardar
+Delete = Eliminar
+Creation_Date = Fecha de Creación
+Memory_value_in_MBytes = Memoria en MBytes
+CPU_will_be_an_unmodifiable_value_after_you_save = CPU será un valor no modificable después de guardar
+You_should_be_sure_of_this_value = Usted debe estar seguro de este valor
+Password_for_LXC_Server = Contraseña de root para LXC Server
+Password_wont_storage_only_will_use_it_if_you_wish_update_Private_Key_in = La contraseña no se almacenará, solamente se usará si usted desea actualizar la Llave Privada en el Servidor LXC.<br /><br /><b>Dejar vacía</b> si el Servidor LXC ya es alcanzado por Miquiloni.
+
+
+[Provisioning]
+Provisioning = Provisionamiento
+Please_Select = Por favor Seleccione
+LXC_Servers_available_in_Sector = LXC Servers disponibles en Sector
+Free_Memory = Memoria libre
+Free_CPUs = CPUs libres
+CPU_Make = Marca CPU
+CPU_Model = Modelo de CPU
+CPU_Speed = Velocidad de CPU
+Free_of = Free of
+I_cannot_read_the_list_of_VGs_Please_go_back_and_try_again = No puedo leer la lista de VG's. Por favor regrese e intente de nuevo.
+Selecting_hardware_base_from = Seleccionando hardware base de
+Memory = Memoria
+Free = Libre
+M_for_memory_unity_MBytes_Default_is_M_if_no_Memory_unity_1024M_instead_of_1G_1024_and_1024M_are_the_same_thing = M para unidad de memoria (MBytes).<br>Por defecto es M si no se incluye unidad de momoria.<br /><b>1024M en lugar de 1G</b>. 1024 y 1024M son la misma cosa.
+If_you_want_one_or_more_whole_CPUs = Si desea uno o mas CPUs completos.
+I_want_whole_CPUs = Quiero CPUs completos
+Percent_CPU = Percentaje de CPU
+I_prefer_a_fraction_of_CPU =  prefiero una fraccciónn de CPU
+If_you_want_a_fraction_of_one_CPUs = Si desea una fracción de un CPU.
+Volume_Size = Tamaño de Volumen
+M_G_or_T_for_volume_size_unity_Default_is_G_if_no_Size_unity_1024M_1G_or_1024_are_the_same_thing = M, G o T para unidad de tamaño de volumen.<br>Por defecto es G si no incluye unidad de medida.<br>1024M, 1G o 1024 es la misma cosa.
+Container_Name = Nombre de Container
+Distro_Release_Arch = Distro, Release, Arch.
+Start_Auto_at_LXC_Server_Start = Iniciar cuando el LXC Server arranque
+Yes = Sí
+No = No
+If_you_want_start_this_container_at_moment_of_start_the_LXC_Server_select_Yes = Si desea iniciar el Container al momento de iniciar el LXC Server, seleccione Sí.
+Start_Delay_after_LXC_Server_Start = Retraso después de iniciar el LXC Server
+Seconds = Segundos
+Interfase_eth0_protocol = Protocolo de la Interface eth0
+We_strongly_recommend_that_you_select_DHCP_at_startup_and_then_change_it_to_STATIC_if_you_wish = Recomendamos encarecidamente que seleccione DHCP al inicio y después, cambie a STATIC si lo desea.<br><br>Razón:<br>Cuando se crea un nuevo Container, SSH es instalado cuando lo inicia por ves primera y si no tiene la configuración correcta de red, este no se instalará y usted no será capáz de acceder con la llave pública.
+IP_Address_IPv4 = Dirección IP IPv4
+Gateway = Puerta de Enlace
+Netmask = Máscar de Red
+Network = Red
+Key = Llave pública
+Short_Description = Descripción corta
+Launch_Container = Lanzar Container
+Back_to_start = Regresar al inicio
+Alert = Alerta
+Container_is_creating_now = El Container se está creando ahora.
+Please_wait_a_while_and_dont_close_this_window = Por favor espere un momento y no cierre esta ventana...
+Please = Por favor
+back = regrese
+and_correct_the_field = y corrija el campo
+Memory_value_is_missing = Falta el valor de Memoria
+Memory_value_is_not_correct = Incorrecto valor de Memoria
+Volume_Group_is_missing = Falta el Volume Group
+Volume_Size_is_missing = Falta el Volume Size
+Volume_Size_does_not_have_the_correct_format = El Volume Size no tiene el formato correcto
+Container_Name_is_missing = Falta el Nombre del Container
+Container_Name_has_invalid_characters = El Nombre del Container contiene caracteres inválidos
+Host_Name_is_missing = Falta el Hostname
+Host_Name_has_invalid_characters = El Hostname contiene caracteres inválidos
+Host_Name_already_exists = El Hostname ya existe
+
+
+[accounts]
+User_Accounts = Cuentas de usuario
+Passwords_does_not_match = Los Passwords no coinciden
+Passwords_are_mandatory = Los Passwords son obligatorios
+Username_alredy_exists = El Username ya existe
+User_Name_and_Passwords_are_mandatory = User Name y Passwords son obligatorios
+List_of_Accounts = Lista de Cuentas
+User_Name = User Name
+Name = Nombre
+Last_Name = Apellido Paterno
+Mothers_Last_Name = Apellido Materno
+Email = Email
+Active = Activo
+
+
+[accounts_edit]
+User_Accounts_Edition = Edición de Cuentas de usuario
+Editing = Editando
+Password = Password
+Password_again = Password de nuevo
+Name = Nombre
+Last_Name = Apellido Paterno
+Mothers_Last_Name = Apellido Materno
+ID_Employee = ID de Empleado
+Email = Email
+Secondary_Email = Email Secundario
+Phone = Teléfono
+Secondary_Phone = Teléfono Secundario
+Cost_Center_ID = ID Centro de Costo
+Group_ID = ID de Grupo
+Secondary_Group_ID = ID de Grupo Secundario
+Theme = Tema
+Language = Languaje
+Active = Activ0
+PERMISIONS = PERMISOS
+LXC_Servers = LXC Servers
+LXC_Servers_Edition = Edición de LXC Servers
+Provisioning = Provisionamiento
+Accounts = Cuentas
+Accounts_Edition = Edición de Cuentas
+Containers = Containers
+Containers_Edition = Edición de Containers
+Sectors = Sectores
+Migration = Migración
+Key_Pairs = Pares de Llaves
+Linux_Distros = Linux Distros
+Alert = Alerta
+Saving_changes_for_user = Guardando cambios para el usuario
+Please_wait_a_while_and_dont_close_this_window = Por favor espere un momento y no cierre esta ventana...
+Save = Guardar
+Are_you_sure_you_want_to_continue_deleting_the_user = Está seguro de querer eliminar este usuario?
+Delete = Eliminar
+Create_new_user = Crear nuevo usuario
+Username = Username
+
+
+[Sectors]
+Sector_Management = Administración de Sectores
+List_of_Sectors = Lista de Sectores
+Sector_Name = Nombre del Sector
+Description = Descripción
+Editing_record = Editando registro
+Save = Guardar
+Are_you_sure_you_want_to_continue_deleting_the_Sector = Está seguro de querer eliminar el Sector
+Delete = Eliminar
+NEW_Sector = NUEVO Sector
+Back_to_list = Regresar a la lista
+Creating_new_record = Creanso nuevo registro
+
+
+[Migration]
+Migration = Migración
+We_only_can_migrate_One_Container_at_the_same_time_Please = Solamente podemos migrar in Container a la vez. Por favor
+go_Back = Regrese
+and_select_just_One_Container_to_migrate = y seleccione solo un contenedor para migrar
+Container_is_LOCKED_Please = Container está BLOQUEADO. Por favor
+and_select_another_Container_to_migrate = y seleccione otro Container para migrar
+Container_is_not_STOPPED_Please = Container no está STOPPED. Por favor
+and_STOP_the_Container_to_migrate = y DETENGA el Container a migrar
+LXC_Servers_available_in_Sector = LXC Servers disponibles en el Sector
+Hostname = Hostname
+Free_Memory = Memoria libre
+Free_CPUs = CPUs libres
+CPU_Make = Marca de CPU
+CPU_Model = Modelo de CPU
+CPU_Speed = Velocidad de CPU
+I_cannot_read_the_list_of_VGs_Please_go_back_and_try_again = No puedo leer la lista de VG's. Por favor regrese e intente de nuevo
+Selecting_hardware_base_of = Seleccionando hardware base de
+Memory = Memoria
+Free = Libre
+M_or_G_for_memory_unity_Default_is_M_if_no_Memory_unity_1024M_1G_or_1024_are_the_same_thing = M para unidad de memoria.<br>Por defecto es M si no hay unidad de memoria.<br>1024M, 1G y 1024 son la misma cosa.
+I_want_whole_CPUs = Quiero CPUs completos
+If_you_want_one_or_more_whole_CPUs = Si quiere uno o mas CPUs completos.
+Percent_CPU = Porcentaje de CPU
+I_prefer_a_fraction_of_CPU = Prefiero una fracción de CPU
+If_you_want_a_fraction_of_one_CPUs = Si desea una fracción de un CPU.
+Volume_Size = Tamaño de Volume
+M_G_or_T_for_volume_size_unity_Default_is_G_if_no_Size_unity_1024M_1G_or_1024_are_the_same_thing = M, G or T para unidad del tamaño de volumen.<br>Por defecto es G si no hay unidad de tamaño.<br>1024M, 1G o 1024 son la misma cosa.
+Target_LXC_Server_Password = Password del LXC Server de destino
+Migrate_Container = Migrar Container
+Alert = Alerta
+Container_is_being_migrating_now = Container está siendo migrado ahora
+Please_wait_a_while_and_dont_close_this_window = Por favor espere un momento y no cierre esta ventana...
+Please = Por favor
+back = regrese
+and_correct_the_field = y corrija el campo
+Memory_value_is_missing = Falta el valor de memoria
+Memory_value_is_not_correct = El valor de memoria es incorrecto
+Volume_Group_is_missing = Falta el Volume Group
+Volume_Size_is_missing = Falta el tamaño de Volume
+Volume_Size_does_not_have_the_correct_format = El Volume Size no tiene el formato correcto
+
+
+[Key_Pairs]
+Key_Pairs_Management = Administración de Pares de Llaves
+Key_Pair = Par de Llaves
+already_exists = ya existe
+Please_go = Por favor
+back = regrese
+and_try_with_other_name = e intente con otro nombre
+Input_not_valid_Must_contains_4_characters_at_least_and_must_has = Entrada inválida. Debe contener cuando menos 4 caracteres, y debe tener "a-z", "0-9", "-" y "_"
+Public_Key = Llave Pública
+Unix_Creation_Date = Fecha Unix de creación
+Download_Private_Key = Descargar Llave Privada
+Delete = Eliminar
+Are_you_sure_you_want_to_continue_deleting_the_Key_Pair = Está seguro de desear eliminar el Par de Llaves
+Name_for_a_new_SSH_Key_Pair = Nombre para el nuevo Par de Llaves SSH
+Generate = Generar
+Generating_the_new_Key_Pair = Generando el nuevo Par de Llaves...
+
+
+[Containers]
+Containers_Management = Administración de Containers
+Container = Container
+is_locked_I_cant_start_it = está bloqueado. No puedo iniciarlo
+Alert = Alerta
+Please_wait_a_while_and_dont_close_this_window = Por favor espere un momento y no cierre esta ventana...
+Containers_are_starting_now = Los Containers se están iniciando ahora
+Start = Iniciar
+Containers_are_stoping_now = Los Containers se están deteniendo ahora
+Please_confirm = Por favor confirme
+Are_you_sure_you_want_STOP_these_containers = Está seguro de desear DETENER estos containers
+Yes = Sí
+Cancel = Cancelar
+Stop = Detener
+Containers_are_destroying_now = Los Containers se están destruyendo ahora
+Are_you_sure_you_want_DESTROY_these_containers = Está seguro de desear DESTRUIR estos containers
+Operation_will_destroy_all_data_and_will_not_be_recoverable = La operación destruirá todos los datos, y no serán recuperables
+Destroy = Destruir
+Containers_are_freezing_now = Los Containers están congelándose ahora
+Are_you_sure_you_want_FREEZE_these_containers = Está seguro de desear CONGELAR estos containers
+Freeze = Congelar
+Containers_are_unfreeze_now = Los Containers están descongelándose ahora
+Unfreeze = Descongelar
+Launch = Lanzar
+Migrate = Migrar
+Please_Select_Sector = Por favor seleccione un Sector
+List_of_Containers = Lista de Containers
+Container_Name = Nombre Container
+Hostname = Hostname
+Status = Estatus
+Key = Llave
+Boot_Proto = Boot Proto
+IP_Addr = IP Addr
+LXC_Server = LXC Server
+Distribution = Distribución
+Release = Release
+Architecture= Arquitectura
+Storage = Almacenamiento
+LV_Size = LV Size
+Memory = Memoria
+CPU = CPU
+percent_Cpu = % Cpu
+Creation_Date = Fecha de creación
+
+
+[containers_edit]
+Containers_Edition = Edición de Containers
+Yes = Sí
+No = No
+Editing_Container = Editando Container
+Hostname = Hostname
+You_must_restart_this_container_for_the_changes_take_effect = Debe reiniciar el Container para que los cambios tomen efecto.<br /><br />Note que cualquier pequeño cambio, actualizarán todos los demás valores
+Distro = Distro
+Root_Volume_Size = Tamaño del Root Volume
+Boot_proto = Boot proto
+Netmask = Netmask
+Gateway = Gateway
+Broadcast = Broadcast
+Network = Network
+Memory = Memoria
+free = libre
+Dont_exceed_the_limit_of = No exceda el límite de
+plus_the_current_value_of_this_Container = mas el valor actual de este Container
+CPUs_ID = ID de CPUs
+CPU_Percent = Porcentaje de CPU
+Start_Auto = Auto Iniciar
+Start_Delay = Retraso Inicio
+Short_Description = Descripción corta
+Creation_Date = Fecha de creación
+Alert = Alerta
+Container_is_updating_now = El Container está actualizando ahora
+Please_wait_a_while_and_dont_close_this_window = Por favor espere un momento y no cierre esta ventana...
+Please_confirm = Por favor confirme
+Are_you_sure_you_want_UPDATE_this_container = Está seguro que desea ACTUALIZAR este container
+Cancel = Cancelar
+Save = Guardar
+Reset = Recomenzar
+
+
+[overview]
+Overview = Overview
+Warning = Advertencia
+
+
+[distros]
+Linux_Distributions = Distributiones de Linux
+You_have_not_configured_your_Query_data = Usted no tiene configurados sus datos de 'Customer Number' y 'Password to Query'
+You_have_not_correctly_configured_your_Query_data = Usted no tiene configurados correctamente sus datos de 'Customer Number' y 'Password to Query'
+Please_copy_and_paste_correctly_your_data = Por favor copie y pegue correctamente sus datos del Email que recibió
+Go_to = Vaya a la sección
+section_and_follow_instructions = y siga las instrucciones para mantener actualizada la lista de Distros
+This_is_for_connect_to_a_remote_Server_and = Estos son para conectarse a un Server remoto y mantener actualizada la lista de distros que usted pueda crear en los los Nodos LXC Server
+Please_go_to_the = Por favor vaya a
+register_link = link de registro
+and_requesT_for_your_data_connection = y solicite su conexión de datos
+Then_read_your_Email_and_fill_the_next_form_and = Luego, lea su Email y llene el formulario siguiente y capture sus datos para mantener su lista de Distros actualizada
+Save = Guardar
+Distros = Distros
+Your_current_Distro_List_have_some_issues = Su Lista de Distros actual tiene algunos problemas
+section_and_correct_the_problem = y corrija esos problemas
+Legends = Leyendas
+Distro_is_missing_in_your_Distro_List = Falta Distro en su lista de Distros
+Distro_No_longer_supported = Distro ya no soportada
+Everything_is_Ok = Todo está Ok
+Distro_List = Lista de Distros
+Build_Distro_List = Construir/Reconstruir la lista de Distros
+
+
+[end]
+
+

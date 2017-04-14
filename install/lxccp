@@ -1,0 +1,10 @@
+#!/bin/sh
+cd /var/lib/lxc/
+/bin/tar czf - $1 | /usr/bin/sshpass -p "$3" /usr/bin/ssh -o StrictHostKeyChecking=no root@$2 'tar xzf - -C /var/lib/lxc/'
+if [ "$?" != "0" ]; then
+	echo "Cannot copy $1!" 1>&2
+	exit 1
+fi
+# Use
+# lxccp container remoteServer passwd
+exit 0
