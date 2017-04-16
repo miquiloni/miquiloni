@@ -26,6 +26,16 @@
 
 source ./keys_auto.conf
 
+chown apache:apache /usr/share/httpd
+
+service NetworkManager stop
+
+chkconfig NetworkManager off
+
+service firewalld stop
+
+chkconfig firewalld off
+
 service httpd start
 
 service mysqld start
@@ -35,6 +45,7 @@ chkconfig httpd on
 chkconfig mysqld on
 
 perl -pi -e 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+
 setenforce 0
 
 perl -pi -e 's/Listen 80/Listen 80\nListen 443\n\nTimeout 1200/' /etc/httpd/conf/httpd.conf

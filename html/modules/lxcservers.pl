@@ -192,7 +192,8 @@ $html .= qq~
 			
 			my $status = '#00BB00';
 			$status = '#BB0000' if $lxc->{error};
-			my $lxcServer = qq~<font color="$status"><b>$lxcservers->[$i][1]</b></font>~;
+			my $err = ' - '.$lxc->{error} if $lxc->{error};
+			my $lxcServer = qq~<font color="$status"><b>$lxcservers->[$i][1]</b>$err</font>~;
 			
 			$html .= qq~{
 			recid: '$lxcservers->[$i][0]',

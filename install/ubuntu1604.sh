@@ -50,6 +50,8 @@ mv /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/de
 
 cp -r ../html/* /var/www/miquiloni/html/
 
+chown www-data:www-data /var/www
+
 mysqlPasswdAdmin=`./generateEncKey.pl 12`
 /usr/bin/perl -pi -e "s/DBPASSWD/DBPASSWD \= ${mysqlPasswdAdmin}/g" /var/www/miquiloni/html/miquiloni.conf
 /usr/bin/perl -pi -e "s/MYSQL_PASSWD/${mysqlPasswdAdmin}/g" miquiloni.sql
