@@ -26,6 +26,8 @@
 
 source ./keys_auto.conf
 
+apt install -y apache2 mysql-server sshpass libnet-openssh-perl libdbi-perl libdbd-mysql-perl
+
 /usr/bin/perl -pi -e 's/Timeout 300/Timeout 1200/' /etc/apache2/apache2.conf
 
 a2enmod ssl

@@ -26,6 +26,16 @@
 
 source ./keys_auto.conf
 
+yum install -y net-tools httpd perl-core perl-CGI perl-DBI mod_ssl
+
+wget -c http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+
+rpm -ivh mysql-community-release-el7-5.noarch.rpm
+
+yum install -y mysql-server perl-DBD-MySQL epel-release
+
+yum --enablerepo=epel install -y sshpass perl-Net-OpenSSH
+
 chown apache:apache /usr/share/httpd
 
 service NetworkManager stop
