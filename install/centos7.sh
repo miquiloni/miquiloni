@@ -1,14 +1,7 @@
 #!/bin/sh
 ########################################################################
-# Developed by Hugo Maza M.
-# hugo.maza@gmail.com
-# 
-# miquiloni is a Web UI for LXC Servers management
-# 
-# Writen in free style Perl-CGI + Apache + MySQL + Javascript + CSS
-# 
-# <one line to give the program's name and a brief idea of what it does.>
-# Copyright (C) <year>  <name of author>
+# Miquiloni is a Web UI for LXC Servers management
+# Copyright (C) 2017  Hugo Maza M.
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
