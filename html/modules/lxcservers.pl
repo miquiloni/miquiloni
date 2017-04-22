@@ -120,10 +120,9 @@ if ( $input{submod} eq 'new_record' ) {
 				my ($idNewServer, $cpus) = $sth->fetchrow_array;
 				$sth->finish;
 				
-				$insert_string = '';
 				foreach my $cpuId ( 0 .. $cpus-1 ) {
 					foreach my $quarter ( 1 .. 4 ) {
-						$insert_string = "INSERT INTO cpus (idServer, cpuId, cpuCuarter) VALUES ('$idNewServer', '$cpuId', '$quarter')";
+						my $insert_string = "INSERT INTO cpus (idServer, cpuId, cpuQuarter) VALUES ('$idNewServer', '$cpuId', '$quarter')";
 						$sth = $dbh->prepare("$insert_string");
 						$sth->execute();
 						$sth->finish;
