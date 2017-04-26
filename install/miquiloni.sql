@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS permissions (
 	distros int(1) DEFAULT '0'
 ) ENGINE=InnoDB;
 
-INSERT INTO permissions (idUser, lxcservers, lxcservers_edit, provisioning, accounts, accounts_edit, containers, containers_edit, sectors, sectors_edit, migration, keypairs, distros) 
+INSERT INTO permissions (idUser, lxcservers, lxcservers_edit, provisioning, accounts, accounts_edit, containers, containers_edit, sectors, migration, keypairs, distros) 
 VALUES ('1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
 INSERT INTO permissions (idUser, init, overview, settings) VALUES ('2', '0', '0', '0');
 
