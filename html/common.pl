@@ -65,10 +65,9 @@ sub get_permissions {
 	$PERM{containers_edit} = $perm[12];
 	$PERM{sectors} = $perm[13];
 	$PERM{migration} = $perm[14];
-	$PERM{clone} = $perm[15];
-	$PERM{keypairs} = $perm[16];
-	$PERM{distros} = $perm[17];
-	$PERM{prepare_server} = $perm[18];
+	$PERM{keypairs} = $perm[15];
+	$PERM{distros} = $perm[16];
+	# $PERM{} = $perm[18];
 	# $PERM{} = $perm[19];
 	# $PERM{} = $perm[20];
 	

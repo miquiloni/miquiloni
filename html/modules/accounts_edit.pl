@@ -18,18 +18,26 @@ if ( $input{idUser} ) {
 	$sth->finish;
 	$dbh->disconnect if ($dbh);
 	
+	my @themes = `ls $VAR{themes_path}`;
+	chomp @themes;
+	
+	my $selected;
+	
 	my $themeSelect;
-	my $selected = $data[14] eq 'classic_cloud' ? 'selected' : '';
-	$themeSelect .= qq~<option value="classic_cloud" $selected>classic_cloud</option>~;
-	$selected = $data[14] eq 'desktop7' ? 'selected' : '';
-	$themeSelect .= qq~<option value="desktop7" $selected>desktop7</option>~;
+	foreach my $theme ( @themes ) {
+		$selected = $data[14] eq $theme ? 'selected' : '';
+		$themeSelect .= qq~<option value="$theme" $selected>$theme</option>~;
+	}
 	$selected = undef;
 	
+	my @langs = `ls $VAR{lang_dir}`;
+	chomp @langs;
+	
 	my $langageSelect;
-	$selected = $data[15] eq 'en_US' ? 'selected' : '';
-	$langageSelect .= qq~<option value="en_US" $selected>en_US</option>~;
-	$selected = $data[15] eq 'es_MX' ? 'selected' : '';
-	$langageSelect .= qq~<option value="es_MX" $selected>es_MX</option>~;
+	foreach my $lang ( @langs ) {
+		$selected = $data[15] eq $lang ? 'selected' : '';
+		$langageSelect .= qq~<option value="$lang" $selected>$lang</option>~;
+	}
 	$selected = undef;
 	
 	my $activeSelect;
@@ -111,9 +119,8 @@ if ( $input{idUser} ) {
 		my $chk_containers_edit = $PRM[12] ? 'checked' : '';
 		my $chk_sectors = $PRM[13] ? 'checked' : '';
 		my $chk_migration = $PRM[14] == 1 ? 'checked' : '';
-		# my $chk_clone = $PRM[15] ? 'checked' : '';
-		my $chk_keypairs = $PRM[16] ? 'checked' : '';
-		my $chk_distros = $PRM[17] ? 'checked' : '';
+		my $chk_keypairs = $PRM[15] ? 'checked' : '';
+		my $chk_distros = $PRM[16] ? 'checked' : '';
 		
 		$html .= qq~
 		<tr><td align="right" width="30%"><br />$MSG{PERMISIONS}:<br /><br /></td><td width="70%">&nbsp;</td></tr>

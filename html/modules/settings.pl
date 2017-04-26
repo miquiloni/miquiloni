@@ -23,11 +23,14 @@ unless ( $input{submod} ) {
 	}
 	$selected = undef;
 	
+	my @langs = `ls $VAR{lang_dir}`;
+	chomp @langs;
+	
 	my $langageSelect;
-	$selected = $data[15] eq 'en_US' ? 'selected' : '';
-	$langageSelect .= qq~<option value="en_US" $selected>en_US</option>~;
-	$selected = $data[15] eq 'es_MX' ? 'selected' : '';
-	$langageSelect .= qq~<option value="es_MX" $selected>es_MX</option>~;
+	foreach my $lang ( @langs ) {
+		$selected = $data[15] eq $lang ? 'selected' : '';
+		$langageSelect .= qq~<option value="$lang" $selected>$lang</option>~;
+	}
 	$selected = undef;
 	
 	my $activeSelect;

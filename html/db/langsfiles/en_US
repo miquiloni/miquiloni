@@ -295,7 +295,7 @@ Generating_the_new_Key_Pair = Generating the new Key Pair...
 
 
 [Containers]
-Containers_Management = Administración de Containers
+Containers_Management = Containers Management
 Container = Container
 is_locked_I_cant_start_it = is locked. I can't start it
 Alert = Alert

@@ -58,15 +58,13 @@ CREATE TABLE IF NOT EXISTS permissions (
 	containers int(1) DEFAULT '0',
 	containers_edit int(1) DEFAULT '0',
 	sectors int(1) DEFAULT '0',
-	sectors_edit int(1) DEFAULT '0',
 	migration int(1) DEFAULT '0',
-	clone int(1) DEFAULT '0',
 	keypairs int(1) DEFAULT '0',
-	prepare_server int(1) DEFAULT '0'
+	distros int(1) DEFAULT '0'
 ) ENGINE=InnoDB;
 
-INSERT INTO permissions (idUser, lxcservers, lxcservers_edit, provisioning, accounts, accounts_edit, containers, containers_edit, sectors, sectors_edit, migration, clone, keypairs, prepare_server) 
-VALUES ('1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO permissions (idUser, lxcservers, lxcservers_edit, provisioning, accounts, accounts_edit, containers, containers_edit, sectors, sectors_edit, migration, keypairs, distros) 
+VALUES ('1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
 INSERT INTO permissions (idUser, init, overview, settings) VALUES ('2', '0', '0', '0');
 
 
