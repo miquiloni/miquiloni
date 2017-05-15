@@ -161,6 +161,7 @@ Container_Name_has_invalid_characters = El Nombre del Container contiene caracte
 Host_Name_is_missing = Falta el Hostname
 Host_Name_has_invalid_characters = El Hostname contiene caracteres inválidos
 Host_Name_already_exists = El Hostname ya existe
+Container_Name_already_exists = El Nombre de Contenedor ya existe
 
 
 [accounts]

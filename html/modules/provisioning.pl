@@ -100,13 +100,13 @@ unless ( $input{submod} ) {
 					my $freemem = $SRV{$key}{data}[1] - $SRV{$key}{utilizedmemory};
 					my $freecpus = $SRV{$key}{data}[2] - $SRV{$key}{utilizedcpus};
 					my $freememColor = $freemem >= 1 ? '#00BB00' : '#BB0000';
-					my $freecpusColor = $freecpusColor >= 1 ? '#00BB00' : '#BB0000';
+					my $freecpusColor = $freecpus >= 0.25 ? '#00BB00' : '#BB0000';
 					
 					$html .= qq~{
 					recid: '$key-$freemem-$freecpus',
 					hostname: '$SRV{$key}{data}[0]',
 					freemem: '<font color="$freememColor"><b>$freemem</b></font> of $SRV{$key}{data}[1]',
-					freecpus: '<font color="#00BB00"><b>$freecpus</b></font> of $SRV{$key}{data}[2]',
+					freecpus: '<font color="$freecpusColor"><b>$freecpus</b></font> of $SRV{$key}{data}[2]',
 					cpumake: '$SRV{$key}{data}[3]',
 					cpumodel: '$SRV{$key}{data}[4]',
 					cpuspeed: '$SRV{$key}{data}[5]',
@@ -228,7 +228,7 @@ if ( $input{submod} eq 'select_storage' ) {
 			my $rest = 100 * ".$percentcpu";
 			foreach my $prcnt ( 25, 50, 75 ) {
 				if ( $prcnt <= $rest ) {
-					$selectPercentCpu .= qq~<option value=".$prcnt">$prcnt \%</option>~;
+					$selectPercentCpu .= qq~<option value="$prcnt">$prcnt \%</option>~;
 				} else {
 					last;
 				}
@@ -238,7 +238,7 @@ if ( $input{submod} eq 'select_storage' ) {
 	
 	my $selectCPUs = qq~<select name="cpus" style="width: 100px;">~;
 	foreach my $qtyCPUs ( 1 .. $intcpu ) {
-		$selectCPUs .= qq~<option value="$qtyCPUs"> $qtyCPUs</option>\n~;
+		$selectCPUs .= qq~<option value="$qtyCPUs">$qtyCPUs</option>\n~;
 	}
 	$selectCPUs .= qq~</select>~;
 	
@@ -502,6 +502,11 @@ if ( $input{submod} eq 'configure_container' ) {
 	$sth->execute();
 	my ($hostName, $host, $privateKey) = $sth->fetchrow_array;
 	$sth->finish;
+	
+	$sth = $dbh->prepare("SELECT containerName, hostName FROM containers WHERE containerName = '$input{containerName}' OR hostName = '$input{hostname}' AND idServer = '$input{idServer}'");
+	$sth->execute();
+	my ($TESTcontainerName, $TESThostName) = $sth->fetchrow_array;
+	$sth->finish;
 	$dbh->disconnect if ($dbh);
 	
 	$input{containerName} =~ s/\s/\_/g;
@@ -530,35 +535,45 @@ if ( $input{submod} eq 'configure_container' ) {
 	# lvcreate: $input{volumeSize}, "lv$input{containerName}", $input{vg}<br>
 	# ~;
 	
+	
+	
 	my $ok = 1;
+	
 	unless ( $input{memory} ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Memory_value_is_missing}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
 	unless ( $input{memory} =~ /M$/) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Memory_value_is_not_correct}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
+	
 	unless ( $input{vg} ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Volume_Group_is_missing}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br/><br/>~; $ok = 0;
 	}
+	
 	unless ( $input{volumeSize} ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Volume_Size_is_missing}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
 	unless ( $input{volumeSize} =~ /(M|G)$/ ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Volume_Size_does_not_have_the_correct_format}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
+	
 	unless ( $input{containerName} ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Container_Name_is_missing}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
 	unless ( $input{containerName} =~ /^[a-zA-Z0-9\_\-\.]+$/ ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Container_Name_has_invalid_characters}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
+	if ( $input{containerName} eq $TESTcontainerName ) {
+		$html .= qq~<font color="#BB0000"><b>$MSG{Container_Name_already_exists}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
+	}
+	
 	unless ( $input{hostname} ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Host_Name_is_missing}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
 	unless ( $input{hostname} =~ /^[a-zA-Z0-9\_\-\.]+$/ ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Host_Name_has_invalid_characters}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
-	unless ( $input{hostname} ne $hostName ) {
+	if ( $input{hostname} eq $TESThostName ) {
 		$html .= qq~<font color="#BB0000"><b>$MSG{Host_Name_already_exists}</b></font>. $MSG{Please} <a href="javascript:history.back();">$MSG{back}</a> $MSG{and_correct_the_field}<br /><br />~; $ok = 0;
 	}
 	
@@ -674,16 +689,15 @@ if ( $input{submod} eq 'configure_container' ) {
 			
 			$log->Log("FAIL-REMOVE-LVM:RemoveLVM:Name=$input{containerName};LVMResponse=$responseUmount") if $responseUmount;
 			
-			# $html .= qq~
-			# \$response=$response<br>
-			# \$lvcreate=$lvcreate<br>
-			# \$mkfsxfs=$mkfsxfs<br>
-			# \$lvmount=$lvmount<br>
-			# ~;
+			##$html .= qq~
+			##\$response=$response<br>
+			##\$lvcreate=$lvcreate<br>
+			##\$mkfsxfs=$mkfsxfs<br>
+			##\$lvmount=$lvmount<br>
+			##~;
 			print "Location: index.cgi?mod=containers\n\n";
 		}
-		
-		# $html .= qq~Aquí no debe llegar~;
+		##$html .= qq~Aquí no debe llegar~;
 	}
 }
 

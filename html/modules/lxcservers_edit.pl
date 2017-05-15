@@ -101,7 +101,7 @@ if ( $input{idServer} ) {
 		<tr><td align="right" width="30%">$MSG{CPU_Speed}: </td><td width="70%"><input type="text" name="cpuSpeed" value="$data[8]"></td></tr>
 		<tr><td align="right" width="30%">$MSG{Private_Key}: </td><td width="70%">$selectKeyPair</td></tr>
 		
-		<tr><td align="right" width="30%" style="color: #FFA500">$MSG{Password_for_LXC_Server}: </td><td width="70%"><input type="text" name="passwd4LXCserver">
+		<tr><td align="right" width="30%" style="color: #FFA500">$MSG{Password_for_LXC_Server}: </td><td width="70%"><input type="password" name="passwd4LXCserver">
 		<img src="../images/help-32x32.png" width="16" onMouseOver="showToolTip('$MSG{Password_wont_storage_only_will_use_it_if_you_wish_update_Private_Key_in}', '', '', '');" onMouseout="hideToolTip();" />
 		</td></tr>
 		
